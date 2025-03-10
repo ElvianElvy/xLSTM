@@ -1,0 +1,37 @@
+{
+    "paths": {
+        "model_dir": "saved_models",
+        "output_dir": "predictions",
+        "log_dir": "logs"
+    },
+    "training": {
+        "epochs": 100,
+        "batch_size": 32,
+        "learning_rate": 0.0005,
+        "hidden_size": 256,
+        "num_layers": 3,
+        "sequence_length": 30,
+        "train_days": 365,
+        "validation_split": 0.2,
+        "early_stopping": true,
+        "mixed_precision": true
+    },
+    "prediction": {
+        "create_visualization": true,
+        "prediction_days": 7,
+        "num_samples": 20
+    },
+    "model": {
+        "dropout": 0.3,
+        "l2_reg": 1e-05,
+        "use_attention": true,
+        "attention_heads": 8,
+        "uncertainty": true
+    },
+    "binance_api": {
+        "use_websocket": true,
+        "rate_limit": 1200,
+        "retry_attempts": 3,
+        "timeout": 30
+    }
+}
